@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    line-height: 1.6;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    color: black;
+    font-weight: 1000;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    color: black;
+}
+
+h2 {
+    font-weight: 700;
+}
+
+.navbar {
+    box-shadow: 0 4px 2px -2px white;
+    background-color: black;
+}
+
+.btn-light {
+    background-color: #a8dadc;
+    color: #1d3557;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-light:hover {
+    background-color: #457b9d;
+    color: #fafafa;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    border: none;
+    background-color: #ffffff;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.header {
+    font-weight: 700;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.container-lg,
+.container-sm {
+    max-width: 1140px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+.home {
+    max-width: 1140px;
+    margin: auto;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+
+}
+
+.nav-link {
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #457b9d;
+}
+
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.left-content {
+    flex: 1;
+}
+
+.right-content {
+    flex: 1;
+}
+
+.logo {
+    width: 50%;
+    height: 50%;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+
+}
+
+.pictures {
+    border-radius: 10%;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card-spacing {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.rounded-corners {
+    border-radius: 2.5%;
+    /* Change this value to adjust the rounding */
+}
+
+.contact {
+    text-align: center;
+}
+
+.navitem {
+    font-family: 'Playfair Display', serif !important;
+    color: black !important;
+    font-weight: 1000 !important;
+}
+
+.nav-link {
+    font-size: 20px !important;
+    /* Set the font size to your desired value */
+}

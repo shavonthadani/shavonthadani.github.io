@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Latest compiled Bootstrap JavaScript -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Additional W3 schools css stylesheet I found -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="formValidation.js"></script>
+
+    <style>
+        body,
+        html {
+            height: 100%;
+            line-height: 1.8;
+        }
+
+        /* Full height image header */
+        .bgimg-1 {
+            background-position: center;
+            background-size: cover;
+            background-image: url("assets/Poodletrim.jpeg");
+            min-height: 100%;
+        }
+
+        .w3-bar .w3-button {
+            padding: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar (sit on top) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid d-flex justify-content-between">
+            <div class="d-inline-flex mb-2">
+                <a class="nav-link navitem" href="#home">
+                    <img src="assets/paw.png" width="50" height="50" class=" me-4 align-self-center">
+                </a>
+                <ul class="navbar-nav me-4 align-self-center flex-row">
+                    <li class="nav-item d-inline me-4">
+                        <a class="nav-link navitem" href="#services">
+                            Services
+                        </a>
+                    </li>
+                    <li class="nav-item d-inline me-4">
+                        <a class="nav-link navitem" href="#team">
+                            Our Groomers
+                        </a>
+                    </li>
+                    <li class="nav-item d-inline me-4">
+                        <a class="nav-link navitem" href="#faq">
+                            FAQ
+                        </a>
+                    </li>
+                    <li class="nav-item d-inline me-4">
+                        <a class="nav-link navitem" href="#contact">
+                            Contact Us
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="ms-auto">
+                <button type="button" class="btn btn-lg btn-light navitem" data-bs-toggle="modal"
+                    data-bs-target="#bookingModal">
+                    Book Now
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- Header with full-height image -->
+    <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+        <div class="w3-display-left" style="padding:48px">
+            <h1 class="h1">
+                Scissor Paws
+            </h1>
+            <img class="logo" src="assets/logo1.png" alt="">
+            <span class="w3-xxlarge w3-hide-large w3-hide-medium">Start something that matters</span><br>
+            <h2>Where Fur Flies with Style and Smiles!</h2>
+            <h6>Open 24 hours, 7 days a week</h6>
+            <h6>535 Legget Dr,<br>Ottawa, ON K2K 3B8,<br>Canada</h6>
+            <h6><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                </svg> 613-516-9990</h6>
+            <h6><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+                </svg> ottawa@scissorpaws.com</h6>
+            <br></br>
+            <p><button type="button" class="btn btn-lg btn-dark" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                    Book Now
+                </button></p>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <div class="w3-container" style="padding:128px 16px" id="services">
+        <h1 class="contact">Our Services</h1>
+        <br></br>
+        <div class="row justify-content-center" id="services">
+            <div class="card p-0 card-spacing" style="width: 18rem;">
+                <img src="assets/puppy.jpeg" class="card-img-top" style="max-height: 170px; object-fit: cover;"
+                    alt="...">
+                <h5 class="card-title mt-4 px-3 fw-bold fs-4">Puppy Package</h5>
+                <span class="px-3 text-muted">$20</span>
+                <div class="card-body">
+                    <p class="card-text">
+                        <button type="button" class="btn btn-lg btn-dark" data-bs-toggle="modal"
+                            data-bs-target="#bookingModal">
+                            Book Now
+                        </button>
+                        <br>
+                        <br>
+                        This gentle introduction to grooming includes a soft bath, puppy-safe nail trim, ear cleaning,
+                        and a light brushing. We ensure a comforting experience for your puppy that not only cleanses
+                        but also eases them into the world of grooming.
+                    </p>
+                </div>
+            </div>
+            <div class="card p-0 card-spacing" style="width: 18rem;">
+                <img src="assets/dogwash.jpeg" class="card-img-top" style="max-height: 170px; object-fit: cover;"
+                    alt="...">
+                <h5 class="card-title mt-4 px-3 fw-bold fs-4">Basic Package</h5>
+                <span class="px-3 text-muted"> $35</span>
+                <div class="card-body">
+                    <p class="card-text">
+                        <button type="button" class="btn btn-lg btn-dark" data-bs-toggle="modal"
+                            data-bs-target="#bookingModal">
+                            Book Now
+                        </button>
+                        <br>
+                        <br>
+                        Along with a rejuvenating bath, professional nail trim, and thorough ear cleaning, this enhanced
+                        package also includes a calming paw pad treatment. To round it
+                        off, we end with a meticulous brush-out to keep your pet's coat shiny and free from loose fur.
+                    </p>
+                </div>
+            </div>
+            <div class="card p-0 card-spacing" style="width: 18rem;">
+                <img src="assets/haircut.jpeg" class="card-img-top" style="max-height: 170px; object-fit: cover;"
+                    alt="...">
+                <h5 class="card-title mt-4 px-3 fw-bold fs-4">Premium Package</h5>
+                <span class="px-3 text-muted">$50</span>
+                <div class="card-body">
+                    <p class="card-text">
+                        <button type="button" class="btn btn-lg btn-dark" data-bs-toggle="modal"
+                            data-bs-target="#bookingModal">
+                            Book Now
+                        </button>
+                        <br>
+                        <br>
+                        This all-inclusive package offers a lavish bath, professional ear cleaning, nail trim, and a
+                        breed-specific haircut. We top it off with a relaxing paw pad treatment, gentle teeth brushing,
+                        and a full body brush-out for a shiny, healthy coat.
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="bookingModalLabel">Book an appointment.</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Alert for when user does not fill in all fields-->
+                <div id="alert" class="alert alert-danger d-none" role="alert">
+                    Please fill out all fields.
+                </div>
+                <form id="book-appointment" action="" method="get">
+                    <div class="modal-body">
+                        <h4>
+                            Your Information
+                        </h4>
+                        <div class="p-2 row">
+                            <div class="col">
+                                <label for="inputFirst" class="form-label">First Name</label>
+                                <input type="text" class="form-control" id="inputFirst" placeholder="John" required>
+                            </div>
+                            <div class="col">
+                                <label for="inputLast" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="inputLast" placeholder="Doe" required>
+                            </div>
+                        </div>
+                        <div class="p-2">
+                            <label for="inputEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp"
+                                placeholder="johndoe@example.com" required>
+                        </div>
+                        <div class="p-2">
+                            <label for="inputPhone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="inputPhone" placeholder="(XXX) XXX-XXXX"
+                                required>
+                        </div>
+                        <br>
+                        <h4>
+                            Your Dog's Information
+                        </h4>
+                        <div class="p-2 row">
+                            <div class="col">
+                                <label for="inputFirst" class="form-label">Breed</label>
+                                <input type="text" class="form-control" id="inputBreed" placeholder="Golden Retriever"
+                                    required>
+                            </div>
+                            <div class="col">
+                                <label for="inputDogSize" class="form-label">Select size of dog</label>
+                                <select id="inputDogSize" class="form-select" aria-label="Default select example"
+                                    required>
+                                    <option value="" selected>-- Select --</option>
+                                    <option value="less than 20 lbs">less than 20 lbs</option>
+                                    <option value="20-50 lbs">20-50 lbs</option>
+                                    <option value="51-80 lbs">51-80 lbs</option>
+                                    <option value="more than 80 lbs">more than 80 lbs</option>
+                                </select>
+                            </div>
+                        </div>
+                        <h4 class="mt-4">
+                            Choose a Service
+                        </h4>
+                        <div class="p-2">
+                            <label for="inputService" class="form-label">Select a service</label>
+                            <select id="inputService" class="form-select" aria-label="Default select example" required>
+                                <option value="" selected>-- Select --</option>
+                                <option value="Puppy Package - $20.00">Puppy Package - $20.00</option>
+                                <option value="Basic Package - $35.00">Basic Package - $35.00</option>
+                                <option value="Premium Package - $50.00">Premium Package - $50.00</option>
+                            </select>
+                        </div>
+                        <div class="p-2">
+                            <label for="inputExpert" class="form-label">Select a pet groomer</label>
+                            <select id="inputExpert" class="form-select" aria-label="Default select example" required>
+                                <option value="" selected>-- Select --</option>
+                                <option value="John Smith">John Smith</option>
+                                <option value="Emma Jones">Emma Jones</option>
+                                <option value="No Preference">No Preference</option>
+                            </select>
+                        </div>
+                        <div class="p-2">
+                            <div class="form-group row">
+
+                                <div class="col-10">
+
+                                    <label for="datepicker">Choose a date</label>
+                                    <p><input class="form-control" type="date" id="datepicker"></p>
+
+                                    <label for="default-picker">Choose a Time</label>
+                                    <p><input type="time" id="default-picker" class="form-control"
+                                            placeholder="Select time"></p>
+
+                                    <label for="comments">Additional Comments</label>
+                                    <textarea class="form-control" rows="4" cols="50" id="comments"></textarea>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" id="submit" class="btn btn-dark">Confirm</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Confirmation Modal -->
+    <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmModalLabel">Confirmation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="col">
+                        <h6>A confirmation email was sent to your inbox</h6>
+                        <h5>Your Information</h5>
+                        <h6>First Name</h6> <input type="text" class="form-control" id="confirmFirstName" readonly><br>
+                        <h6>Last Name</h6> <input type="text" class="form-control" id="confirmLastName" readonly><br>
+                        <h6>Email</h6> <input type="text" class="form-control" id="confirmEmail" readonly><br>
+                        <h6>Phone</h6> <input type="text" class="form-control" id="confirmPhone" readonly><br>
+
+                        <h5>Your Dog's Information</h5>
+                        <h6>Breed</h6> <input type="text" class="form-control" id="confirmBreed" readonly><br>
+                        <h6>Dog Size</h6> <input type="text" class="form-control" id="confirmDogSize" readonly><br>
+
+                        <h5>Service Information</h5>
+                        <h6>Service</h6> <input type="text" class="form-control" id="confirmService" readonly><br>
+                        <h6>Groomer</h6> <input type="text" class="form-control" id="confirmExpert" readonly><br>
+                        <h6>Date</h6> <input type="text" class="form-control" id="confirmDate" readonly><br>
+                        <h6>Time</h6> <input type="text" class="form-control" id="confirmTime" readonly><br>
+                        <h6>Comments</h6> <textarea class="form-control" rows="4" cols="50" id="confirmComments"
+                            readonly></textarea>
+                        <br>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Our Groomers -->
+    <div class="w3-container w3-light-grey" style="padding:128px 16px" id="team">
+        <div class="w3-row-padding">
+            <div class="w3-col m6">
+                <h3>Our Groomers</h3>
+                <p>Our grooming professionals are the heart and soul of our service, combining years of experience with
+                    a genuine love for animals. Trained in the latest grooming techniques, they understand the unique
+                    needs of different breeds, ensuring your pet receives a tailor-made grooming experience. Their
+                    caring touch and skilled hand will leave your pet looking fabulous and feeling loved!</p>
+
+                <div class="w3-col m6">
+                    <img class="rounded-corners" src="assets/groomercut.jpeg" alt="..." width="700" height="394">
+                </div>
+            </div>
+            <div class="row justify-content-center" id="services">
+                <div class="card p-0 card-spacing" style="width: 18rem;">
+                    <img src="assets/groomer1.jpeg" class="card-img-top" style="max-height: 170px; object-fit: cover;"
+                        alt="...">
+                    <h5 class="card-title mt-4 px-3 fw-bold fs-4">John Smith</h5>
+                    <span class="px-3 text-muted"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+                        </svg> john.smith@scissorpaws.com</span>
+                    <div class="card-body">
+                        <p class="card-text">
+                            Meet John, our seasoned pet groomer, renowned for his expertise in styling breed-specific
+                            haircuts. Combining a deep understanding of diverse breeds with a genuine love for animals,
+                            John transforms each grooming session into a specialty experience, ensuring your pet looks
+                            fantastic and feels even better!
+                        </p>
+                    </div>
+                </div>
+                <div class="card p-0 card-spacing" style="width: 18rem;">
+                    <img src="assets/groomer2.jpeg" class="card-img-top" style="max-height: 170px; object-fit: cover;"
+                        alt="...">
+                    <h5 class="card-title mt-4 px-3 fw-bold fs-4">Emma Jones</h5>
+                    <span class="px-3 text-muted"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+                        </svg> emma.jones@scissorpaws.com</span>
+                    <div class="card-body">
+                        <p class="card-text">
+                            Introduce yourself to Emma, our skilled groomer renowned for her exceptional skills in
+                            soothing anxious pets. Emma's calming methods and gentle touch create a stress-free grooming
+                            environment, making her a favorite among pets with sensitive temperaments. When it comes to
+                            patient, kind, and effective grooming, Emma is an unmatched expert.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- FAQ -->
+    <div class="w3-container" style="padding:128px 16px" id="faq">
+        <h1 class="contact">Frequently Asked Questions</h1>
+        <br>
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <strong>How long does a grooming session typically take?</strong>
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Depending on the size, breed, and coat condition of your dog, a grooming session can take
+                        anywhere from one to three hours.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapseThree">
+                        <strong>How often should I have my dog groomed?</strong>
+                    </button>
+                </h2>
+                <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        The frequency of grooming depends on your dog's breed, hair length, and lifestyle. As a general
+                        rule, most dogs should be groomed every four to six weeks, but dogs with longer hair may require
+                        more frequent or professional grooming.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapseThree">
+                        <strong>My dog is nervous about grooming. What can I do?</strong>
+                    </button>
+                </h2>
+                <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        It's common for dogs to be anxious about grooming, especially if they're not used to it. We
+                        recommend bringing a favorite toy or blanket to comfort your dog. Also, spending some time
+                        getting your dog used to being handled and touched can be helpful. This includes touching your
+                        dog's paws, which can make nail trimming easier.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapseThree">
+                        <strong>What should I do to prepare my dog for grooming?</strong>
+                    </button>
+                </h2>
+                <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Before coming to the grooming session, make sure your dog has had plenty of exercises so they're
+                        more relaxed. Also, it's a good idea to brush your dog to remove any mats or tangles.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapseThree">
+                        <strong>What do I need to do post-grooming?</strong>
+                    </button>
+                </h2>
+                <div id="collapse7" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        After grooming, we recommend waiting for a while before you let your dog jump into a pool or
+                        play in the mud. Besides, if your dog was trimmed or shaved, limit their exposure to extreme sun
+                        to prevent sunburn.
+
+                        Remember that the best source of information about your pet's grooming needs is your groomer -
+                        don't hesitate to reach out with any specific concerns or questions about your pet's care!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Contact Section -->
+    <div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+        <div id="alertContact" class="alert alert-danger d-none" role="alert">
+            Please fill out all fields.
+        </div>
+        <div id="alertContactSuccess" class="alert alert-success d-none" role="alert">
+            Sent.
+        </div>
+        <h1 class="contact">Contact us</h1>
+        <div class="contact" style="margin-top:20px">
+            <h6>Open 24 hours, 7 days a week</h6>
+            <h6>535 Legget Dr,<br>Ottawa, ON K2K 3B8,<br>Canada</h6>
+            <h6><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                </svg> 613-516-9990</h6>
+
+            <h6><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+                </svg> ottawa@scissorpaws.com</h6>
+            <br>
+            <form action="/action_page.php" target="_blank">
+                <p><input id="contactName" class="form-control" type="text" placeholder="Name" required name="Name"></p>
+                <p><input id="contactEmail" class="form-control" type="text" placeholder="Email" required name="Email">
+                </p>
+                <p><input id="contactSubject" class="form-control" type="text" placeholder="Subject" required
+                        name="Subject"></p>
+                <p><input id="contactText" class="form-control" type="text" placeholder="Message" required
+                        name="Message"></p>
+                <p>
+                <p><button id="btnSend" type="reset" class="btn btn-lg btn-dark" data-bs-toggle="modal">
+                        <i class="fa fa-paper-plane"></i> Send Message
+                    </button></p>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="contact w3-black w3-padding-64">
+        <div class="w3-xlarge w3-section">
+            <h6>Open Monday to Friday 9:00 AM - 5:00 PM</h6>
+            <h6>535 Legget Dr,<br>Ottawa, ON K2K 3B8,<br>Canada</h6>
+            <h6><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                </svg> 613-516-9990</h6>
+
+            <h6><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+                </svg> ottawa@scissorpaws.com</h6>
+        </div>
+    </footer>
+
+    <script>
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+
+
+        // Toggle between showing and hiding the sidebar when clicking the menu icon
+        var mySidebar = document.getElementById("mySidebar");
+
+        function w3_open() {
+            if (mySidebar.style.display === 'block') {
+                mySidebar.style.display = 'none';
+            } else {
+                mySidebar.style.display = 'block';
+            }
+        }
+
+        // Close the sidebar with the close button
+        function w3_close() {
+            mySidebar.style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>
